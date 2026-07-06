@@ -48,6 +48,6 @@ export interface Content {
     buildKicker: string;
     projects: Project[];
   };
-  contact: { kicker: string; title: string; intro: string; email: string };
+  contact: { kicker: string; title: string; intro: string; email: string; phone: string };
   footer: { location: string };
 }

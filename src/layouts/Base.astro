@@ -27,6 +27,7 @@ const jsonLd = {
   url: canonical,
   image: ogImage,
   email: c.contact.email,
+  telephone: c.contact.phone.replace(/\s/g, ''),
   priceRange: '€€',
   founder: { '@type': 'Person', name: 'Alberto Martínez' },
   sameAs: ['https://vontus.dev'],

@@ -99,6 +99,7 @@ const c = getContent(locale);
         <a class="btn btn-primary" href={`mailto:${c.contact.email}`}
           ><span class="chev">&gt;</span> {c.contact.email}</a
         >
+        <a class="btn btn-ghost" href={`tel:${c.contact.phone.replace(/\s/g, '')}`}>{c.contact.phone}</a>
       </div>
     </div>
   </section>

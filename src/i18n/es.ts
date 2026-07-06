@@ -124,6 +124,7 @@ export const es: Content = {
     title: 'Cuéntame qué necesitas.',
     intro: 'Sin compromiso. Me escribes, lo vemos, y te digo claro si puedo ayudarte y cuánto costaría.',
     email: 'alberto@tallermartinez.net',
+    phone: '+34 694 918 163',
   },
   footer: { location: 'Torrevieja, Alicante y Murcia' },
 };

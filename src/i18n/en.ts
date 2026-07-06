@@ -23,7 +23,7 @@ export const en: Content = {
   nav: { services: 'Services', how: 'How I work', langLabel: 'Language' },
   hero: {
     eyebrow: 'tech for local businesses',
-    h1: 'The IT support your business can rely on.',
+    h1: 'The IT guy your business can rely on.',
     lead: 'Websites, data, backups and social media — handled by one person. No jargon, and right on your doorstep.',
     ctaPrimary: "Let's talk",
     ctaGhost: 'See services',
@@ -124,6 +124,7 @@ export const en: Content = {
     title: 'Tell me what you need.',
     intro: "No obligation. Drop me a line, we'll talk it through, and I'll tell you straight whether I can help and what it'd cost.",
     email: 'alberto@tallermartinez.net',
+    phone: '+34 694 918 163',
   },
   footer: { location: 'Torrevieja, Alicante & Murcia' },
 };
