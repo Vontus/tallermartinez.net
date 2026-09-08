@@ -113,6 +113,11 @@ export const es: Content = {
         tag: 'Bot',
       },
       {
+        nombre: 'Moone',
+        desc: 'App de finanzas personales que estoy construyendo: cuentas, presupuestos y patrimonio, todo en un sitio.',
+        tag: 'App',
+      },
+      {
         nombre: 'vontus.dev',
         desc: 'Mi taller personal de software: proyectos, código abierto y el lado más técnico de lo que hago.',
         tag: 'Web',

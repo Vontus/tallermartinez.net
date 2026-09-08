@@ -113,6 +113,11 @@ export const en: Content = {
         tag: 'Bot',
       },
       {
+        nombre: 'Moone',
+        desc: "A personal finance app I'm building: accounts, budgets and net worth, all in one place.",
+        tag: 'App',
+      },
+      {
         nombre: 'vontus.dev',
         desc: 'My personal software workshop: projects, open source and the more technical side of what I do.',
         tag: 'Web',
