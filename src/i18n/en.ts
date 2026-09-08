@@ -103,24 +103,22 @@ export const en: Content = {
     buildKicker: 'what I build',
     projects: [
       {
-        nombre: 'warden',
-        desc: 'Automatic deployment system for self-hosted services. What keeps my own projects running on their own.',
-        tag: 'Infra',
-      },
-      {
         nombre: 'UrbanDictionaryBot',
         desc: 'A Telegram bot with inline search, navigation and a word of the day. Thousands of lookups served.',
         tag: 'Bot',
+        url: 'https://t.me/urbandictionarybot',
       },
       {
         nombre: 'Moone',
         desc: "A personal finance app I'm building: accounts, budgets and net worth, all in one place.",
         tag: 'App',
+        url: 'https://vontus.dev/en/moone',
       },
       {
         nombre: 'vontus.dev',
         desc: 'My personal software workshop: projects, open source and the more technical side of what I do.',
         tag: 'Web',
+        url: 'https://vontus.dev',
       },
     ],
   },

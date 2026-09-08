@@ -79,7 +79,15 @@ const c = getContent(locale);
             c.about.projects.map((p) => (
               <article class="mini-card">
                 <div class="mini-head">
-                  <h3>{p.nombre}</h3>
+                  <h3>
+                    {p.url ? (
+                      <a href={p.url} rel="noopener" target="_blank">
+                        {p.nombre}
+                      </a>
+                    ) : (
+                      p.nombre
+                    )}
+                  </h3>
                   <span class="tag">{p.tag}</span>
                 </div>
                 <p>{p.desc}</p>
