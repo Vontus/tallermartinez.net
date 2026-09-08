@@ -103,19 +103,22 @@ export const es: Content = {
     buildKicker: 'lo que construyo',
     projects: [
       {
-        nombre: 'warden',
-        desc: 'Sistema de despliegue automático para servicios self-hosted. Lo que mantiene mis proyectos funcionando solos.',
-        tag: 'Infra',
-      },
-      {
         nombre: 'UrbanDictionaryBot',
         desc: 'Bot de Telegram con búsqueda inline, navegación y palabra del día. Miles de consultas servidas.',
         tag: 'Bot',
+        url: 'https://t.me/urbandictionarybot',
+      },
+      {
+        nombre: 'Moone',
+        desc: 'App de finanzas personales que estoy construyendo: cuentas, presupuestos y patrimonio, todo en un sitio.',
+        tag: 'App',
+        url: 'https://vontus.dev/moone',
       },
       {
         nombre: 'vontus.dev',
         desc: 'Mi taller personal de software: proyectos, código abierto y el lado más técnico de lo que hago.',
         tag: 'Web',
+        url: 'https://vontus.dev',
       },
     ],
   },

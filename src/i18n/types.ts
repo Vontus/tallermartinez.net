@@ -16,6 +16,7 @@ export interface Project {
   nombre: string;
   desc: string;
   tag: string;
+  url?: string;
 }
 
 export interface Content {
