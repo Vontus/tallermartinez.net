@@ -1,0 +1,99 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+
+	"meta_title": "Taller Martínez — IT support for local businesses in Torrevieja, Alicante & Murcia",
+	"meta_description": "The IT support your local business can rely on, in Torrevieja, Alicante province and the Region of Murcia. Websites, data, backups, social media and AI — handled by one person.",
+	"meta_area_served_0": "Torrevieja",
+	"meta_area_served_1": "Alicante province",
+	"meta_area_served_2": "Region of Murcia",
+	"meta_knows_about_0": "Web design and development",
+	"meta_knows_about_1": "Online shops",
+	"meta_knows_about_2": "Custom apps",
+	"meta_knows_about_3": "Backups",
+	"meta_knows_about_4": "Social media management",
+	"meta_knows_about_5": "Social media ads",
+	"meta_knows_about_6": "AI for small businesses",
+	"meta_knows_about_7": "IT consulting",
+
+	"nav_services": "Services",
+	"nav_how": "How I work",
+	"nav_lang_label": "Language",
+
+	"hero_eyebrow": "tech for local businesses",
+	"hero_h1": "The IT guy your business can rely on.",
+	"hero_lead": "Websites, data, backups and social media — handled by one person. No jargon, and right on your doorstep.",
+	"hero_cta_primary": "Let's talk",
+	"hero_cta_ghost": "See services",
+
+	"problem_title": "Your job is running your business, not the tech.",
+	"problem_intro": "And yet everything depends on it working — the website, the socials, the data. When it goes wrong, you're the one left wrestling with dashboards and warnings that aren't your problem to solve.",
+	"problem_pain_0": "The website's been down or out of date for months.",
+	"problem_pain_1": "No backups — until the day you need them.",
+	"problem_pain_2": "The socials haven't been touched since last summer.",
+	"problem_pain_3": "You're paying for software and nobody's quite sure what it's for.",
+
+	"services_kicker": "services",
+	"services_title": "What I do for you",
+	"services_intro": "Everything technical, handled by one person. Take what you need.",
+
+	"services_item_0_titulo": "AI, put to work for you",
+	"services_item_0_desc": "The same AI the big players use, working for you instead: an assistant that answers your customers, content for your socials, or the tedious paperwork handled on its own. No hype, explained in plain English.",
+	"services_item_0_detalle_0": "Assistants & chatbots",
+	"services_item_0_detalle_1": "AI content",
+	"services_item_0_detalle_2": "Automation",
+
+	"services_item_1_titulo": "Your website & apps",
+	"services_item_1_desc": "Websites, online shops and custom apps. From a landing page that brings in customers to an in-house tool that saves you hours.",
+	"services_item_1_detalle_0": "Websites & online shops",
+	"services_item_1_detalle_1": "Custom apps",
+	"services_item_1_detalle_2": "Automations",
+
+	"services_item_2_titulo": "Your data, kept safe",
+	"services_item_2_desc": "Backups that actually work, your files in order, and data protection done properly. So one bad day doesn't wipe out years of work.",
+	"services_item_2_detalle_0": "Automatic backups",
+	"services_item_2_detalle_1": "Disaster recovery",
+	"services_item_2_detalle_2": "GDPR basics",
+
+	"services_item_3_titulo": "Your online presence",
+	"services_item_3_desc": "Social media, content and ads that actually get seen. You show up where your customers are, without having to wrestle with Meta Business.",
+	"services_item_3_detalle_0": "Social media",
+	"services_item_3_detalle_1": "Local ads",
+	"services_item_3_detalle_2": "Content",
+
+	"services_item_4_titulo": "Advice",
+	"services_item_4_desc": "Which tool to use, how to digitise that process, why you're paying for three apps that do the same thing. I explain it jargon-free and you decide.",
+	"services_item_4_detalle_0": "Which tools to use",
+	"services_item_4_detalle_1": "Going digital",
+	"services_item_4_detalle_2": "A second opinion",
+
+	"how_kicker": "how I work",
+	"how_title": "Local, hands-on, done right.",
+	"how_intro": "A small operation, straight-talking, and work done properly — start to finish, with my name on it.",
+
+	"how_item_0_titulo": "You always deal with me",
+	"how_item_0_desc": "No call centres, no ticket numbers. The technical side is handled by one person, the same one from start to finish: me.",
+	"how_item_1_titulo": "No jargon",
+	"how_item_1_desc": "I explain things in plain English so you can decide with the full picture. No small print, no hype.",
+	"how_item_2_titulo": "Clear pricing",
+	"how_item_2_desc": "A fixed quote before we start. You know what you're paying and why — no surprises at the end of the month.",
+	"how_item_3_titulo": "Local to you",
+	"how_item_3_desc": "Based in Torrevieja, I work across Alicante province and the Region of Murcia. If it helps we meet in person; if not, I'll call you all the same.",
+
+	"about_kicker": "who's behind this",
+	"about_title": "I'm just starting out. That works in your favour.",
+	"about_body_html": "I'm Alberto Martínez, eight years building software. I've just set up Taller Martínez to look after local businesses — which means one thing for you: <strong>my full attention and down-to-earth pricing.</strong> You won't get lost in a crowd of clients.",
+	"about_build_kicker": "what I build",
+
+	"about_project_0_nombre": "UrbanDictionaryBot",
+	"about_project_0_desc": "A Telegram bot with inline search, navigation and a word of the day. Thousands of lookups served.",
+	"about_project_1_nombre": "Moone",
+	"about_project_1_desc": "A personal finance app I'm building: accounts, budgets and net worth, all in one place.",
+	"about_project_2_nombre": "vontus.dev",
+	"about_project_2_desc": "My personal software workshop: projects, open source and the more technical side of what I do.",
+
+	"contact_kicker": "contact",
+	"contact_title": "Tell me what you need.",
+	"contact_intro": "No obligation. Drop me a line, we'll talk it through, and I'll tell you straight whether I can help and what it'd cost.",
+
+	"footer_location": "Torrevieja, Alicante & Murcia"
+}

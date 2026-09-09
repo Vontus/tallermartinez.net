@@ -11,5 +11,10 @@
   },
   "dependencies": {
     "astro": "^5.7.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@inlang/paraglide-js": "^2.25.1",
+    "typescript": "^6.0.3"
   }
 }

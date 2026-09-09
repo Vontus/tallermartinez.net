@@ -50,22 +50,36 @@ rasterizan con `sharp`.
 
 ## i18n
 
-Traducciones tipo "proyecto grande", con routing manual (sin la config i18n de
-Astro, más predecible en estático):
+[Paraglide JS](https://paraglidejs.com) (inlang), con el routing propio de
+Paraglide (sin `astro:i18n`: exige `output: 'server'`, incompatible con
+GitHub Pages estático):
 
-- **Diccionarios por idioma:** `src/i18n/es.ts` y `src/i18n/en.ts`, tipados por
-  `Content` (`types.ts`). **Todo el texto vive ahí.** `index.ts` →
-  `getContent(locale)`, `locales`, `defaultLocale`.
-- **Markup único:** `src/components/Landing.astro` pinta las secciones desde el
-  diccionario; `src/pages/{es,en}/index.astro` son una línea cada una.
-- **Rutas:** `/es/` y `/en/`. La raíz `/` (`src/pages/index.astro`) es un
-  **redirector cliente** que lee `navigator.languages` y manda a `/es/` o `/en/`
-  (por defecto es); entrar directo a `/es` o `/en` se respeta. La raíz va `noindex`.
+- **Mensajes por idioma:** `messages/es.json` y `messages/en.json` (claves flat
+  snake_case, namespaced por sección/página, p. ej. `services_item_0_titulo`).
+  **Todo el texto vive ahí.** El compilador de Paraglide (plugin de vite en
+  `astro.config.mjs`) genera `src/paraglide/` (`messages.js` → `m.*`,
+  `runtime.js` → `getLocale`, `setLocale`, `localizeHref`, `locales`,
+  `baseLocale`, `assertIsLocale`) en cada `pnpm dev`/`pnpm build` — **no se
+  comitea** (el propio compilador crea un `.gitignore` dentro de esa carpeta).
+- **Datos no traducibles** (contacto, metadatos por idioma, URLs/tags de
+  proyectos): `src/i18n/content.ts`, fuera de Paraglide.
+- **Markup único:** `src/components/Landing.astro` pinta las secciones
+  llamando a `m.*` (lee el locale actual con `getLocale()`, fijado antes de
+  renderizar). `src/pages/[locale]/index.astro` genera `/es/` y `/en/` vía
+  `getStaticPaths()` + `setLocale()` — sin páginas duplicadas por idioma.
+- **Rutas:** `/es/` y `/en/` (prefijo siempre, configurado en `urlPatterns` del
+  plugin). Los enlaces internos, el hreflang y el selector de idioma se
+  construyen con `localizeHref()`, nunca a mano. La raíz `/`
+  (`src/pages/index.astro`) es un **redirector cliente** que lee
+  `navigator.languages` y manda a `/es/` o `/en/` (por defecto es, vía
+  `baseLocale` del runtime de Paraglide); entrar directo a `/es` o `/en` se
+  respeta. La raíz va `noindex`. El locale se fija en build (no hace falta
+  `paraglideMiddleware()`, eso es solo para SSR).
 
 ## SEO
 
 - Por idioma: `<html lang>`, title, description, Open Graph, Twitter y JSON-LD
-  `ProfessionalService` localizados (en `Base.astro`, desde el diccionario).
+  `ProfessionalService` localizados (en `Base.astro`, desde `m.*`/`content.ts`).
 - `hreflang` es/en/x-default en cada página + `public/sitemap.xml` (ambas URLs) y
   `public/robots.txt`. `og:image` propio por idioma.
 
@@ -73,16 +87,19 @@ Astro, más predecible en estático):
 
 ```
 src/
-  layouts/Base.astro        <head> (meta/SEO/hreflang/JSON-LD), header, footer. Prop: locale
+  layouts/Base.astro        <head> (meta/SEO/hreflang/JSON-LD), header, footer. Lee getLocale()
   components/
-    Landing.astro           Todas las secciones; prop locale (lee el diccionario)
+    Landing.astro           Todas las secciones; llama a m.* (lee getLocale())
     SectionHead.astro       kicker (opcional) + título + intro
     ServiceCard.astro       Tarjeta. Prop `featured` → variante IA (banner ancho).
                             Estructura .card-body/.card-title/.card-desc
     Kicker.astro            `> texto` (un solo sitio para el espacio tras el `>`)
-  i18n/{types,es,en,index}.ts
-  pages/{index,es/index,en/index}.astro
+  i18n/content.ts           Datos no traducibles (contacto, metadatos, proyectos)
+  paraglide/                Generado por el compilador de Paraglide — NO se comitea
+  pages/{index,[locale]/index}.astro
   styles/global.css         Todos los estilos (un único archivo)
+messages/{es,en}.json       Todo el texto del sitio
+project.inlang/settings.json
 public/  logo.svg wordmark.svg favicon.svg og.png og-en.png CNAME robots.txt sitemap.xml
 ```
 
@@ -91,8 +108,9 @@ public/  logo.svg wordmark.svg favicon.svg og.png og-en.png CNAME robots.txt sit
 - **Componetizar lo que se repite** (cards, cabeceras, kickers) para que las
   variantes no diverjan. Espaciado título→descripción de las cards: fuente única
   en `.card-body { gap }`.
-- **Texto nuevo → al diccionario** (`src/i18n/*.ts`), nunca hardcodear en el
-  markup, y siempre en los **dos idiomas**.
+- **Texto nuevo → a los mensajes** (`messages/es.json` y `messages/en.json`),
+  nunca hardcodear en el markup, y siempre en los **dos idiomas**. Claves flat
+  snake_case, namespaced por sección (ver claves existentes como referencia).
 - PRs y commits **en inglés**.
 
 ## Desarrollo y despliegue
