@@ -3,54 +3,13 @@ import Base from '../layouts/Base.astro';
 import SectionHead from './SectionHead.astro';
 import ServiceCard from './ServiceCard.astro';
 import Kicker from './Kicker.astro';
-import { contact, featuredServiceIndex, projects } from '../i18n/content';
-import { getLocale } from '../paraglide/runtime';
+import { contact, featuredServiceIndex, getAboutProjects, getHowItems, getPains, getServices } from '../i18n/content';
 import * as m from '../paraglide/messages';
 
-const locale = getLocale();
-
-const services = [
-  {
-    titulo: m.services_item_0_titulo(),
-    desc: m.services_item_0_desc(),
-    detalle: [m.services_item_0_detalle_0(), m.services_item_0_detalle_1(), m.services_item_0_detalle_2()],
-  },
-  {
-    titulo: m.services_item_1_titulo(),
-    desc: m.services_item_1_desc(),
-    detalle: [m.services_item_1_detalle_0(), m.services_item_1_detalle_1(), m.services_item_1_detalle_2()],
-  },
-  {
-    titulo: m.services_item_2_titulo(),
-    desc: m.services_item_2_desc(),
-    detalle: [m.services_item_2_detalle_0(), m.services_item_2_detalle_1(), m.services_item_2_detalle_2()],
-  },
-  {
-    titulo: m.services_item_3_titulo(),
-    desc: m.services_item_3_desc(),
-    detalle: [m.services_item_3_detalle_0(), m.services_item_3_detalle_1(), m.services_item_3_detalle_2()],
-  },
-  {
-    titulo: m.services_item_4_titulo(),
-    desc: m.services_item_4_desc(),
-    detalle: [m.services_item_4_detalle_0(), m.services_item_4_detalle_1(), m.services_item_4_detalle_2()],
-  },
-];
-
-const howItems = [
-  { titulo: m.how_item_0_titulo(), desc: m.how_item_0_desc() },
-  { titulo: m.how_item_1_titulo(), desc: m.how_item_1_desc() },
-  { titulo: m.how_item_2_titulo(), desc: m.how_item_2_desc() },
-  { titulo: m.how_item_3_titulo(), desc: m.how_item_3_desc() },
-];
-
-const aboutProjects = [
-  { nombre: m.about_project_0_nombre(), desc: m.about_project_0_desc() },
-  { nombre: m.about_project_1_nombre(), desc: m.about_project_1_desc() },
-  { nombre: m.about_project_2_nombre(), desc: m.about_project_2_desc() },
-].map((p, i) => ({ ...p, tag: projects[i].tag, url: projects[i].url[locale] }));
-
-const pains = [m.problem_pain_0(), m.problem_pain_1(), m.problem_pain_2(), m.problem_pain_3()];
+const services = getServices();
+const howItems = getHowItems();
+const aboutProjects = getAboutProjects();
+const pains = getPains();
 ---
 
 <Base>
