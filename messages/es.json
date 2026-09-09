@@ -1,0 +1,99 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+
+	"meta_title": "Taller Martínez — Informático para empresas en Torrevieja, Alicante y Murcia",
+	"meta_description": "El informático de confianza de tu negocio en Torrevieja, la provincia de Alicante y la Región de Murcia. Diseño web, tiendas online, copias de seguridad, redes sociales e IA, en manos de una sola persona.",
+	"meta_area_served_0": "Torrevieja",
+	"meta_area_served_1": "Provincia de Alicante",
+	"meta_area_served_2": "Región de Murcia",
+	"meta_knows_about_0": "Diseño y desarrollo web",
+	"meta_knows_about_1": "Tiendas online",
+	"meta_knows_about_2": "Aplicaciones a medida",
+	"meta_knows_about_3": "Copias de seguridad",
+	"meta_knows_about_4": "Gestión de redes sociales",
+	"meta_knows_about_5": "Publicidad en redes",
+	"meta_knows_about_6": "Inteligencia artificial para negocios",
+	"meta_knows_about_7": "Consultoría informática",
+
+	"nav_services": "Servicios",
+	"nav_how": "Cómo trabajo",
+	"nav_lang_label": "Idioma",
+
+	"hero_eyebrow": "tecnología para empresas locales",
+	"hero_h1": "El informático de confianza de tu negocio.",
+	"hero_lead": "Web, datos, copias de seguridad y redes sociales, en manos de una sola persona. Sin tecnicismos y aquí al lado.",
+	"hero_cta_primary": "Hablemos",
+	"hero_cta_ghost": "Ver servicios",
+
+	"problem_title": "Lo tuyo es tu negocio, no la informática.",
+	"problem_intro": "Y aun así, dependes de que funcione: la web, las redes, los datos. Y cuando se tuerce, te toca pelearte con paneles y avisos que no son lo tuyo.",
+	"problem_pain_0": "La web lleva meses caída o desactualizada.",
+	"problem_pain_1": "No tienes copias de seguridad… hasta que las necesitas.",
+	"problem_pain_2": "Las redes sociales llevan abandonadas desde el verano pasado.",
+	"problem_pain_3": "Pagas programas que nadie sabe muy bien para qué son.",
+
+	"services_kicker": "servicios",
+	"services_title": "Qué hago por ti",
+	"services_intro": "Todo lo técnico, llevado por una sola persona. Coge lo que necesites.",
+
+	"services_item_0_titulo": "IA aplicada a tu día a día",
+	"services_item_0_desc": "La misma inteligencia artificial que usan las grandes, puesta a trabajar para ti: un asistente que atiende a tus clientes, contenido para redes o el papeleo pesado hecho solo. Sin humo y explicado en cristiano.",
+	"services_item_0_detalle_0": "Asistentes y chatbots",
+	"services_item_0_detalle_1": "Contenido con IA",
+	"services_item_0_detalle_2": "Automatización",
+
+	"services_item_1_titulo": "Tu web y tus apps",
+	"services_item_1_desc": "Páginas, tiendas y aplicaciones a medida. Desde una landing que capte clientes hasta una herramienta interna que te ahorre horas.",
+	"services_item_1_detalle_0": "Webs y tiendas online",
+	"services_item_1_detalle_1": "Apps a medida",
+	"services_item_1_detalle_2": "Automatizaciones",
+
+	"services_item_2_titulo": "Tus datos a salvo",
+	"services_item_2_desc": "Copias de seguridad que funcionan de verdad, orden en tus archivos y cumplimiento de protección de datos. Para que un susto no se lleve años de trabajo.",
+	"services_item_2_detalle_0": "Copias automáticas",
+	"services_item_2_detalle_1": "Recuperación ante fallos",
+	"services_item_2_detalle_2": "RGPD básico",
+
+	"services_item_3_titulo": "Tu presencia online",
+	"services_item_3_desc": "Redes sociales, contenido y publicidad que sí se ve. Apareces donde está tu gente, sin que tengas que pelearte con Meta Business.",
+	"services_item_3_detalle_0": "Redes sociales",
+	"services_item_3_detalle_1": "Publicidad local",
+	"services_item_3_detalle_2": "Contenido",
+
+	"services_item_4_titulo": "Consultoría",
+	"services_item_4_desc": "Qué herramienta usar, cómo digitalizar ese proceso, por qué pagas tres programas que hacen lo mismo. Te lo explico sin tecnicismos y decides tú.",
+	"services_item_4_detalle_0": "Qué herramientas usar",
+	"services_item_4_detalle_1": "Digitalizar procesos",
+	"services_item_4_detalle_2": "Segunda opinión",
+
+	"how_kicker": "cómo trabajo",
+	"how_title": "Cercanía de barrio, herramientas de hoy.",
+	"how_intro": "«Taller» es una palabra de oficio: trabajo bien hecho y trato directo. Así trabajo yo.",
+
+	"how_item_0_titulo": "Hablas siempre conmigo",
+	"how_item_0_desc": "Nada de centralitas ni tickets. La parte técnica la lleva una persona, la misma de principio a fin: yo.",
+	"how_item_1_titulo": "Sin tecnicismos",
+	"how_item_1_desc": "Te explico las cosas en cristiano y tú decides con la información clara. Nada de letra pequeña ni humo.",
+	"how_item_2_titulo": "Precios claros",
+	"how_item_2_desc": "Presupuesto cerrado antes de empezar. Sabes lo que pagas y por qué, sin sorpresas a final de mes.",
+	"how_item_3_titulo": "En tu zona",
+	"how_item_3_desc": "Con base en Torrevieja, trabajo en toda la provincia de Alicante y la Región de Murcia. Si hace falta, nos vemos; si no, te llamo igual.",
+
+	"about_kicker": "quién está detrás",
+	"about_title": "Empiezo ahora. Y eso te conviene.",
+	"about_body_html": "Soy Alberto Martínez, 8 años desarrollando software. Acabo de montar Taller Martínez para dar servicio a negocios de la zona, y eso significa una cosa para ti: <strong>atención total y precios de cercanía.</strong> No te pierdes entre otros mil.",
+	"about_build_kicker": "lo que construyo",
+
+	"about_project_0_nombre": "UrbanDictionaryBot",
+	"about_project_0_desc": "Bot de Telegram con búsqueda inline, navegación y palabra del día. Miles de consultas servidas.",
+	"about_project_1_nombre": "Moone",
+	"about_project_1_desc": "App de finanzas personales que estoy construyendo: cuentas, presupuestos y patrimonio, todo en un sitio.",
+	"about_project_2_nombre": "vontus.dev",
+	"about_project_2_desc": "Mi taller personal de software: proyectos, código abierto y el lado más técnico de lo que hago.",
+
+	"contact_kicker": "contacto",
+	"contact_title": "Cuéntame qué necesitas.",
+	"contact_intro": "Sin compromiso. Me escribes, lo vemos, y te digo claro si puedo ayudarte y cuánto costaría.",
+
+	"footer_location": "Torrevieja, Alicante y Murcia"
+}

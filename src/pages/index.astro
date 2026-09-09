@@ -2,18 +2,18 @@
 // Selector de idioma de la raíz. Detecta el idioma del navegador y redirige a
 // /es/ o /en/. Solo actúa en "/" — entrar directo a /es o /en se respeta.
 // El sitio es estático (GitHub Pages), así que la detección es en cliente.
-import { defaultLocale, locales } from '../i18n';
+import { baseLocale, locales } from '../paraglide/runtime';
 ---
 
 <!doctype html>
-<html lang={defaultLocale}>
+<html lang={baseLocale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Taller Martínez</title>
     <link rel="canonical" href="https://tallermartinez.net/" />
-    <script is:inline define:vars={{ defaultLocale, supported: locales }}>
+    <script is:inline define:vars={{ defaultLocale: baseLocale, supported: locales }}>
       (function () {
         var langs =
           navigator.languages && navigator.languages.length

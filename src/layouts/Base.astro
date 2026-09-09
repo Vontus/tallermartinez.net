@@ -1,33 +1,43 @@
 ---
 import '../styles/global.css';
-import { getContent, locales, type Locale } from '../i18n';
+import { contact, localeMeta } from '../i18n/content';
+import { getLocale, localizeHref, locales } from '../paraglide/runtime';
+import * as m from '../paraglide/messages';
 
-interface Props {
-  locale: Locale;
-}
-
-const { locale } = Astro.props;
-const c = getContent(locale);
+const locale = getLocale();
+const meta = localeMeta[locale];
 
 const year = new Date().getFullYear();
 const base = import.meta.env.BASE_URL;
 
 const canonical = new URL(Astro.url.pathname, Astro.site).href;
-const ogImage = new URL(c.meta.ogImage, Astro.site).href;
+const ogImage = new URL(meta.ogImage, Astro.site).href;
 
-// URLs por idioma (rutas /es/ y /en/) + x-default al selector de la raíz.
-const localeUrl = (l: Locale) => new URL(`${l}/`, Astro.site).href;
+// URLs por idioma vía el routing de Paraglide + x-default al selector de la raíz.
+const localeUrl = (l: typeof locale) => new URL(localizeHref('/', { locale: l }), Astro.site).href;
 const xDefault = new URL('/', Astro.site).href;
+
+const knowsAbout = [
+  m.meta_knows_about_0(),
+  m.meta_knows_about_1(),
+  m.meta_knows_about_2(),
+  m.meta_knows_about_3(),
+  m.meta_knows_about_4(),
+  m.meta_knows_about_5(),
+  m.meta_knows_about_6(),
+  m.meta_knows_about_7(),
+];
+const areaServed = [m.meta_area_served_0(), m.meta_area_served_1(), m.meta_area_served_2()];
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'Taller Martínez',
-  description: c.meta.description,
+  description: m.meta_description(),
   url: canonical,
   image: ogImage,
-  email: c.contact.email,
-  telephone: c.contact.phone.replace(/\s/g, ''),
+  email: contact.email,
+  telephone: contact.phone.replace(/\s/g, ''),
   priceRange: '€€',
   founder: { '@type': 'Person', name: 'Alberto Martínez' },
   sameAs: ['https://vontus.dev'],
@@ -37,18 +47,18 @@ const jsonLd = {
     addressRegion: 'Alicante',
     addressCountry: 'ES',
   },
-  areaServed: c.meta.areaServed.map((name) => ({ '@type': 'AdministrativeArea', name })),
-  knowsAbout: c.meta.knowsAbout,
+  areaServed: areaServed.map((name) => ({ '@type': 'AdministrativeArea', name })),
+  knowsAbout,
 };
 ---
 
 <!doctype html>
-<html lang={c.meta.htmlLang}>
+<html lang={meta.htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{c.meta.title}</title>
-    <meta name="description" content={c.meta.description} />
+    <title>{m.meta_title()}</title>
+    <meta name="description" content={m.meta_description()} />
     <link rel="canonical" href={canonical} />
     {locales.map((l) => <link rel="alternate" hreflang={l} href={localeUrl(l)} />)}
     <link rel="alternate" hreflang="x-default" href={xDefault} />
@@ -65,16 +75,16 @@ const jsonLd = {
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Taller Martínez" />
-    <meta property="og:title" content={c.meta.title} />
-    <meta property="og:description" content={c.meta.description} />
+    <meta property="og:title" content={m.meta_title()} />
+    <meta property="og:description" content={m.meta_description()} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:locale" content={c.meta.ogLocale} />
+    <meta property="og:locale" content={meta.ogLocale} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={c.meta.title} />
-    <meta name="twitter:description" content={c.meta.description} />
+    <meta name="twitter:title" content={m.meta_title()} />
+    <meta name="twitter:description" content={m.meta_description()} />
     <meta name="twitter:image" content={ogImage} />
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -82,17 +92,17 @@ const jsonLd = {
   <body>
     <header class="site-header">
       <div class="container">
-        <a class="brand" href={`${base}${locale}/`} aria-label="Taller Martínez">
+        <a class="brand" href={localizeHref('/')} aria-label="Taller Martínez">
           <img class="logo-mark" src={`${base}logo.svg`} width="32" height="32" alt="" />
           <img class="wordmark" src={`${base}wordmark.svg`} alt="Taller Martínez" />
         </a>
         <nav class="nav">
-          <a href="#servicios">{c.nav.services}</a>
-          <a href="#como-trabajo">{c.nav.how}</a>
-          <span class="lang" aria-label={c.nav.langLabel}>
+          <a href="#servicios">{m.nav_services()}</a>
+          <a href="#como-trabajo">{m.nav_how()}</a>
+          <span class="lang" aria-label={m.nav_lang_label()}>
             {
               locales.map((l) => (
-                <a href={`${base}${l}/`} class={l === locale ? 'active' : ''} hreflang={l}>
+                <a href={localizeHref('/', { locale: l })} class={l === locale ? 'active' : ''} hreflang={l}>
                   {l.toUpperCase()}
                 </a>
               ))
@@ -108,9 +118,9 @@ const jsonLd = {
 
     <footer class="site-footer">
       <div class="container">
-        <span>© {year} Taller Martínez · {c.footer.location}</span>
+        <span>© {year} Taller Martínez · {m.footer_location()}</span>
         <span>
-          <a href={`mailto:${c.contact.email}`}>{c.contact.email}</a> ·
+          <a href={`mailto:${contact.email}`}>{contact.email}</a> ·
           <a href="https://vontus.dev" rel="noopener" target="_blank">vontus.dev</a>
         </span>
       </div>
