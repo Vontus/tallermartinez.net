@@ -21,7 +21,7 @@
 
 	"hero_eyebrow": "software a medida para negocios locales",
 	"hero_h1": "Tu negocio no cabe en un Excel.",
-	"hero_lead": "Llevo ocho años construyendo software para empresas. Ahora lo hago para los negocios de aquí: herramientas hechas a tu medida, que encajan con cómo trabajas tú.",
+	"hero_lead": "Llevo ocho años construyendo software para los grandes. Ahora lo hago para los negocios de aquí: herramientas hechas a tu medida, que encajan con cómo trabajas tú.",
 	"hero_cta_primary": "Hablemos",
 	"hero_cta_ghost": "Qué te construyo",
 
@@ -61,8 +61,8 @@
 	"services_item_3_detalle_2": "Respuestas automáticas",
 
 	"cases_kicker": "lo que he construido",
-	"cases_title": "Ocho años construyendo software para empresas.",
-	"cases_intro": "Esto es parte de lo que ha salido. Grande o pequeño, el trabajo siempre es el mismo: un proceso que iba a mano y acaba funcionando solo.",
+	"cases_title": "De una central nuclear a la tienda de la esquina.",
+	"cases_intro": "Ocho años de encargos muy distintos, con el mismo trabajo detrás: un proceso que iba a mano y acaba funcionando solo.",
 
 	"cases_item_0_nombre": "Tarjetas regalo de una tienda",
 	"cases_item_0_tag": "Comercio",
@@ -101,8 +101,8 @@
 	"how_principio_2_desc": "Con base en Torrevieja, trabajo en toda la provincia de Alicante y la Región de Murcia.",
 
 	"about_kicker": "quién está detrás",
-	"about_title": "Ocho años haciendo esto. Ahora, aquí al lado.",
-	"about_body_html": "Soy Alberto Martínez. He pasado ocho años construyendo software para empresas —plataformas críticas, productos SaaS, herramientas internas— y he montado Taller Martínez para hacer lo mismo con los negocios de mi zona. Trabajo con IA todos los días, y eso significa que lo que hace unos años eran semanas hoy son días: <strong>lo notas en el plazo y en el presupuesto.</strong>",
+	"about_title": "Detrás no hay una agencia. Estoy yo.",
+	"about_body_html": "Soy Alberto Martínez. He trabajado en plataformas críticas, productos SaaS y herramientas internas para empresas grandes, y he montado Taller Martínez para hacer lo mismo con los negocios de mi zona. Trabajo con IA todos los días, y eso significa que lo que hace unos años eran semanas hoy son días: <strong>lo notas en el plazo y en el presupuesto.</strong>",
 
 	"about_extra_kicker": "y lo demás",
 	"about_extra_intro": "El foco es construir software. Pero si tu negocio necesita esto, también te lo llevo.",
