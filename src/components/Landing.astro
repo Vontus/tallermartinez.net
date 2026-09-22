@@ -3,12 +3,23 @@ import Base from '../layouts/Base.astro';
 import SectionHead from './SectionHead.astro';
 import ServiceCard from './ServiceCard.astro';
 import Kicker from './Kicker.astro';
-import { contact, featuredServiceIndex, getAboutProjects, getHowItems, getPains, getServices } from '../i18n/content';
+import {
+  contact,
+  featuredServiceIndex,
+  getCases,
+  getExtras,
+  getPains,
+  getPrincipios,
+  getServices,
+  getSteps,
+} from '../i18n/content';
 import * as m from '../paraglide/messages';
 
 const services = getServices();
-const howItems = getHowItems();
-const aboutProjects = getAboutProjects();
+const cases = getCases();
+const steps = getSteps();
+const principios = getPrincipios();
+const extras = getExtras();
 const pains = getPains();
 ---
 
@@ -47,13 +58,44 @@ const pains = getPains();
     </div>
   </section>
 
-  <!-- CÓMO TRABAJO -->
-  <section id="como-trabajo" class="alt">
+  <!-- LO QUE HE CONSTRUIDO -->
+  <section id="casos" class="alt">
+    <div class="container">
+      <SectionHead kicker={m.cases_kicker()} title={m.cases_title()} intro={m.cases_intro()} />
+      <div class="case-cards">
+        {
+          cases.map((c) => (
+            <article class="mini-card">
+              <div class="mini-head">
+                <h3>{c.nombre}</h3>
+                <span class="tag">{c.tag}</span>
+              </div>
+              <p>{c.desc}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como-trabajo">
     <div class="container">
       <SectionHead kicker={m.how_kicker()} title={m.how_title()} intro={m.how_intro()} />
+      <ol class="pasos">
+        {
+          steps.map((s, i) => (
+            <li class="paso">
+              <span class="paso-num">{String(i + 1).padStart(2, '0')}</span>
+              <h3>{s.titulo}</h3>
+              <p>{s.desc}</p>
+            </li>
+          ))
+        }
+      </ol>
       <div class="principios">
         {
-          howItems.map((p) => (
+          principios.map((p) => (
             <div class="principio">
               <h3>{p.titulo}</h3>
               <p>{p.desc}</p>
@@ -64,32 +106,22 @@ const pains = getPains();
     </div>
   </section>
 
-  <!-- EMPIEZO AHORA / SOBRE MÍ -->
-  <section class="sobre">
+  <!-- SOBRE MÍ + EL RESTO -->
+  <section class="sobre alt">
     <div class="container split">
       <div>
         <SectionHead kicker={m.about_kicker()} title={m.about_title()} />
         <p class="section-intro" set:html={m.about_body_html()} />
       </div>
       <div>
-        <Kicker text={m.about_build_kicker()} />
+        <Kicker text={m.about_extra_kicker()} />
+        <p class="extras-intro">{m.about_extra_intro()}</p>
         <div class="mini-cards">
           {
-            aboutProjects.map((p) => (
+            extras.map((e) => (
               <article class="mini-card">
-                <div class="mini-head">
-                  <h3>
-                    {p.url ? (
-                      <a href={p.url} rel="noopener" target="_blank">
-                        {p.nombre}
-                      </a>
-                    ) : (
-                      p.nombre
-                    )}
-                  </h3>
-                  <span class="tag">{p.tag}</span>
-                </div>
-                <p>{p.desc}</p>
+                <h3>{e.titulo}</h3>
+                <p>{e.desc}</p>
               </article>
             ))
           }
