@@ -324,7 +324,7 @@ section.alt {
   padding: 0.18rem 0.65rem;
 }
 
-/* Variante destacada (IA): banner horizontal a todo el ancho */
+/* Variante destacada (herramientas a medida): banner horizontal a todo el ancho */
 .card-featured {
   position: relative;
   margin-bottom: 1.1rem;
@@ -359,12 +359,44 @@ section.alt {
   color: var(--fog);
 }
 
+/* ---- Pasos del proceso ---- */
+.pasos {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.8rem 2rem;
+  counter-reset: paso;
+}
+.paso {
+  display: grid;
+  gap: 0.35rem;
+}
+.paso-num {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+.paso h3 {
+  margin: 0;
+  font-size: 1.08rem;
+}
+.paso p {
+  margin: 0;
+  color: var(--fog-soft);
+  font-size: 0.96rem;
+}
+
 /* ---- Principios ---- */
 .principios {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 1.4rem 2rem;
-  margin-top: 0.5rem;
+  margin-top: 3rem;
+  padding-top: 2.4rem;
+  border-top: 1px solid var(--line);
 }
 .principio {
   border-left: 2px solid var(--accent);
@@ -378,6 +410,14 @@ section.alt {
   margin: 0;
   color: var(--fog-soft);
   font-size: 0.98rem;
+}
+
+/* ---- Casos (reutiliza .mini-card) ---- */
+.case-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 /* ---- Sobre / split ---- */
@@ -405,15 +445,18 @@ section.alt {
 }
 .mini-head {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 0.6rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 .mini-card h3 {
   margin: 0;
   font-size: 1.05rem;
-  font-family: var(--mono);
+}
+/* Tarjetas sin cabecera (el bloque "y lo demás"): el hueco lo pone el propio h3. */
+.mini-card > h3 {
+  margin-bottom: 0.3rem;
 }
 .mini-card p {
   margin: 0;
@@ -428,6 +471,12 @@ section.alt {
   border-radius: 999px;
   padding: 0.12rem 0.6rem;
   white-space: nowrap;
+}
+.extras-intro {
+  margin: 0 0 1rem;
+  color: var(--fog-soft);
+  font-size: 0.98rem;
+  max-width: 44ch;
 }
 
 /* ---- Contacto ---- */
